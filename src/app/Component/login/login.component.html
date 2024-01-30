@@ -1,0 +1,19 @@
+<div class="parent">
+    <div class="child">
+        <form [formGroup]="loginForm">
+            <h3>Student Login Form</h3>
+            <br>
+            <input type="email" placeholder="eve.holt@reqres.in" formControlName="email">
+            <br><br>
+            <div class="text-danger" *ngIf="loginForm.get('email')?.touched && loginForm.get('email')?.invalid">
+             <p *ngIf="loginForm.get('email')?.errors?.['required']">Email is required</p>   
+            </div>
+            <input type="password" placeholder="enter you password" formControlName="password">
+            <br><br>
+            <div class="text-danger" *ngIf="loginForm.get('password')?.touched && loginForm.get('password')?.invalid">
+                <p *ngIf="loginForm.get('password')?.errors?.['required']">password is required</p>   
+               </div>
+            <button (click)="login()"> Login</button>
+        </form>
+    </div>
+</div>

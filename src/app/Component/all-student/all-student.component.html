@@ -1,0 +1,24 @@
+<table class="table table-white table-bordered">
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>Gender</th>
+            <th>Mobile</th>
+            <th>Batch</th>
+            <th>District</th>
+            <th>Company-Name</th>
+            <th>Package</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let student of students">
+            <td>{{student.name}}</td>
+            <td>{{student.gender}}gender</td>
+            <td>{{student.mobile}}mobile</td>
+            <td> {{student.batch}}</td>
+            <td> {{student.district}}</td>
+            <td>{{student.name}}</td>
+            <td>{{student.package}}</td>
+        </tr>
+    </tbody>
+</table>
